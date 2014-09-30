@@ -4,6 +4,8 @@ Reimplements globals entirely, providing `global_variable_set`, `global_variable
 
 Since you lose the `$X = ...` syntax, it provides a `global` helper method.
 
+"The most straightfaced implementation of an unnecessary idea." –@mistydemeo
+
 ## Installation
 
 Add this line to your application's Gemfile:
