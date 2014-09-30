@@ -1,6 +1,8 @@
 # Spinny::GlobalVariables
 
-TODO: Write a gem description
+Reimplements globals entirely, providing `global_variable_set`, `global_variable_get`, and `global_variable_defined`.
+
+Since you lose the `$X = ...` syntax, it provides a `global` helper method.
 
 ## Installation
 
@@ -20,7 +22,22 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'spinny/global_variables'
+
+global_variable_get(:foo) #=> nil
+global_variable_defined?(:foo) #=> false
+
+global_variable_set(:foo, 'bar') #=> 'bar'
+
+global_variable_get(:foo) #=> 'bar'
+global_variable_defined?(:foo) #=> true
+
+global :foo #=> 'bar'
+global foo: 'baz' #=> {foo: 'baz'}
+global :foo #=> 'baz'
+global_variable_get(:foo) #=> 'baz'
+```
 
 ## Contributing
 
