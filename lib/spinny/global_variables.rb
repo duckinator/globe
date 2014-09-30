@@ -45,11 +45,13 @@ module Kernel
   end
 
   #
-  def global(x)
-    if x.is_a?(Hash)
-      Spinny::GlobalVariables.set(x)
+  def global(obj)
+    if obj.is_a?(Hash)
+      obj.each do |k, v|
+        Spinny::GlobalVariables.set(k, v)
+      end
     else
-      Spinny::GlobalVariables.get(x)
+      Spinny::GlobalVariables.get(obj)
     end
   end
 end
