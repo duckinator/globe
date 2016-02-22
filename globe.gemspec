@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'wot/globals/version'
+require 'globe/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "wot-globals"
-  spec.version       = Wot::Globals::VERSION
+  spec.name          = "globe"
+  spec.version       = Globe::VERSION
   spec.authors       = ["Marie Markwell"]
   spec.email         = ["me@marie.so"]
   spec.summary       = "Global variables reimplementation for Ruby."
   spec.description   = spec.description
-  spec.homepage      = "https://github.com/wot/wot-globals"
+  spec.homepage      = "https://github.com/wot/globe"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
