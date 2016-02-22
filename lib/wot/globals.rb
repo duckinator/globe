@@ -1,15 +1,15 @@
-require 'spinny/global_variables/version'
-require 'spinny/utilities'
+require 'wot/globals/version'
+require 'wot/utilities'
 
 # Reimplements global variables using module variables!
 #
 # Mostly because global_variable_defined?, global_variable_get, and
 # global_variable_set are magnificent things.
-module Spinny
+module Wot
   # This module reimplements global variables using class variables.
   # There are convenience methods defined on the Kernel module, like Ruby has
   # for class variables.
-  module GlobalVariables
+  module Globals
     @@globals = {}
 
     class << self
@@ -33,25 +33,25 @@ end
 module Kernel
   #
   def global_variable_defined?(name)
-    Spinny::GlobalVariables.defined?(name)
+    Wot::Globals.defined?(name)
   end
 
   def global_variable_get(name)
-    Spinny::GlobalVariables.get(name)
+    Wot::Globals.get(name)
   end
 
   def global_variable_set(name, value)
-    Spinny::GlobalVariables.set(name, value)
+    Wot::Globals.set(name, value)
   end
 
   #
   def global(obj)
     if obj.is_a?(Hash)
       obj.each do |k, v|
-        Spinny::GlobalVariables.set(k, v)
+        Wot::Globals.set(k, v)
       end
     else
-      Spinny::GlobalVariables.get(obj)
+      Wot::Globals.get(obj)
     end
   end
 end
