@@ -1,4 +1,4 @@
-# Wot::Globals
+# Globe
 
 Reimplements globals entirely, providing `global_variable_set`, `global_variable_get`, and `global_variable_defined`.
 
@@ -11,7 +11,7 @@ Since you lose the `$X = ...` syntax, it provides a `global` helper method.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'wot-global_variables'
+gem 'globe'
 ```
 
 And then execute:
@@ -20,12 +20,12 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install wot-global_variables
+    $ gem install globe
 
 ## Usage
 
 ```ruby
-require 'wot/globals'
+require 'globe'
 
 global_variable_get(:foo) #=> nil
 global_variable_defined?(:foo) #=> false
@@ -43,7 +43,7 @@ global_variable_get(:foo) #=> 'baz'
 
 ## Contributing
 
-1. Fork it ( https://github.com/ruby-wot/wot-globals/fork )
+1. Fork it ( https://github.com/ruby-wot/globe/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
