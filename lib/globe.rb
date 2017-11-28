@@ -1,5 +1,4 @@
-require 'wot/globals/version'
-require 'wot/utilities'
+require "globe/version"
 
 # Reimplements global variables using class variables.
 #
